@@ -16,6 +16,6 @@ private:
 
 public:
 	ITEMS();
-	ITEMS(string itemName, int quality, int range, Texture2D texture, int attackDamage, Vector2 positon);
+	ITEMS(string itemName, int quality, int range, string textureName, int attackDamage, Vector2 positon);
 
 };
