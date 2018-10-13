@@ -13,6 +13,8 @@ public:
 	Vector2 Position;
 	Texture2D Texture;
 
+	Color Tint;
+
 	TILE();
 	TILE& operator=(const TILE &tile);
 };
@@ -25,13 +27,14 @@ private:
 	const static int TotalTextures = 188;
 	int DrawLayer;
 	int DrawObject;
+	bool Preview;
 
 public:
 	TILE MapGrid[Layers][Size][Size];
 	int NewMap[Layers][Size][Size] =
 	{
-		{
-			{ 188,188,188,188,188,188,188,188,188,188 },
+	{
+	{ 188,188,188,188,188,188,188,188,188,188 },
 	{ 188,188,188,188,188,188,188,188,188,188 },
 	{ 188,188,188,188,188,188,188,188,188,188 },
 	{ 188,188,188,188,188,188,188,188,188,188 },
@@ -73,5 +76,8 @@ public:
 	
 	void UpdateMapTextures();
 	void DrawOnMap();
+
+	void SaveMap();
+	void LoadMap();
 };
 
