@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapGame", "MapGame\MapGame.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Casting", "Casting\Casting.vcxproj", "{32D7B43E-E113-4708-B4E4-F2D2D1F1D971}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inheritance", "Inheritance\Inheritance.vcxproj", "{D65E845A-CF14-4088-9220-EAAFA1FBFD08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{32D7B43E-E113-4708-B4E4-F2D2D1F1D971}.Release|x64.Build.0 = Release|x64
 		{32D7B43E-E113-4708-B4E4-F2D2D1F1D971}.Release|x86.ActiveCfg = Release|Win32
 		{32D7B43E-E113-4708-B4E4-F2D2D1F1D971}.Release|x86.Build.0 = Release|Win32
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Debug|x64.ActiveCfg = Debug|x64
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Debug|x64.Build.0 = Debug|x64
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Debug|x86.ActiveCfg = Debug|Win32
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Debug|x86.Build.0 = Debug|Win32
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Release|x64.ActiveCfg = Release|x64
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Release|x64.Build.0 = Release|x64
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Release|x86.ActiveCfg = Release|Win32
+		{D65E845A-CF14-4088-9220-EAAFA1FBFD08}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
