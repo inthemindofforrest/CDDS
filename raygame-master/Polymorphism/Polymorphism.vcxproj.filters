@@ -57,6 +57,9 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Source Files\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="Necromancer.cpp">
+      <Filter>Source Files\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BarbarianButton.h">
@@ -80,6 +83,9 @@
     <ClInclude Include="Enemy.h">
       <Filter>Header Files\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="Necromancer.h">
+      <Filter>Header Files\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="WizardSprite.png">
@@ -92,6 +98,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="RightButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="NecromancerSprite.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

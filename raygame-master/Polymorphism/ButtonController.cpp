@@ -13,7 +13,7 @@ BUTTON::~BUTTON()
 
 void BUTTON::Draw()
 {
-	DrawTexture(Texture, Rect.x, Rect.y, WHITE);
+	DrawTexture(Texture, (int)Rect.x, (int)Rect.y, WHITE);
 }
 
 bool BUTTON::Clicked()
@@ -22,4 +22,5 @@ bool BUTTON::Clicked()
 	{
 		return true;
 	}
+	return false;
 }
