@@ -13,9 +13,10 @@ class TVECTOR
 public:
 	TVECTOR()// initializes the vector's default values
 	{
-		arr = new T[0]();
+		arrCapacity = 1;
+		arr = new T[arrCapacity]();
 		arrSize = 0;
-		arrCapacity = 0;
+		
 	}
 	~TVECTOR()                         // destroys the underlying array
 	{
@@ -31,7 +32,7 @@ public:
 	void reserve(size_t newCapacity)   // resizes the vector to at least this many elements
 	{
 		T *temp = new T[newCapacity]();
-		for (size_t i = 0; i < arrSize; i++)
+		for (size_t i = 0; i <= arrSize; i++)
 		{
 			if (i > newCapacity)
 				break;
@@ -41,30 +42,50 @@ public:
 
 		arrCapacity = newCapacity;
 		arr = temp;
-
-		delete temp;
 	}
 
 	void push_back(const T &value)     // adds an element to the end of the vector
 	{
-		if ((arrCapacity - 1) == arrSize)
+		if ((arrCapacity) == arrSize)
 		{
-			reserve(arrSize * GROWTH_FACTOR);
+			reserve(arrCapacity * GROWTH_FACTOR);
 		}
 
-		arr[arrSize += 1] = value;
+		arr[arrSize] = value;
+		arrSize++;
 	}
 	void pop_back()                    // drops the last element of the vector
 	{
-		T *temp = new T[arrCapacity -= 1]();
-		for (size_t i = 0; i < arrCapacity; i++)
+		/*T *temp = new T[arrSize -= 1]();
+		for (size_t i = 0; i < arrSize; i++)
 		{
 			temp[i] = arr[i];
 		}
 		delete[] arr;
 
 		arrSize--;
-		arr = temp;
+		arr = temp;*/
+		arrSize--;
+	}
+
+	void push_front(const T &value)     // adds an element to the end of the vector
+	{
+		if ((arrCapacity) == arrSize)
+		{
+			reserve(arrCapacity * GROWTH_FACTOR);
+		}
+		
+		arrSize++;
+
+		for (size_t i = arrSize - 1; i > 0; i--)
+			arr[i] = arr[i - 1];
+		arr[0] = value;
+	}
+	void pop_front()                    // drops the last element of the vector
+	{
+		for (int i = 0; i < arrSize - 1; i++)
+			arr[i] = arr[i + 1];
+		arrSize--;
 	}
 
 	T &at(size_t index)                // returns the element at the given element
@@ -96,6 +117,7 @@ public:
 
 	TVECTOR& operator=(const TVECTOR &vec)
 	{
+		delete[] arr;
 		arr = new T[vec.arrCapacity]();
 		arrSize = vec.arrSize;
 		arrCapacity = vec.arrCapacity;
@@ -108,10 +130,39 @@ public:
 
 	T& operator[] (size_t index)
 	{
-		arr = new T[index]();
-		arrSize = index;
-		arrCapacity = 0;
+		return at(index);
 	}
+
+
+	bool empty()         // Returns true if the vector contains no elements.
+	{
+		return !arrSize;
+	}
+	void shrink_to_fit() // Resizes the vector's capacity to match its size.
+	{
+		T temp = new T[arrSize];
+		for (size_t i = 0; i < arrSize; i++)
+			temp[i] = arr[i];
+
+		delete[] arr;
+
+		arr = temp;
+		arrCapacity = arrSize;
+	}
+	void clear()         // Empties the vector (all elements are destroyed in this process)
+	{
+		arrCapacity = 1;
+		arrSize = 0;
+
+		T temp = new T[arrCapacity];
+
+		delete[] arr;
+
+		arr = temp;
+	}
+
+
+
 };
 
 

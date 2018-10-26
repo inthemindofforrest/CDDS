@@ -1,3 +1,4 @@
+#include "..\Vectors\Player.h"
 #include "Player.h"
 
 PLAYER::PLAYER(const std::string & fileName)
@@ -8,6 +9,8 @@ PLAYER::PLAYER(const std::string & fileName)
 PLAYER::PLAYER()
 {
 }
+
+
 
 PLAYER::~PLAYER()
 {
