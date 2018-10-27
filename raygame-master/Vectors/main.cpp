@@ -4,6 +4,7 @@
 #include "Queue.h"
 #include "SpellCaster.h"
 #include "Player.h"
+#include "Enemy.h"
 
 int main()
 {
@@ -21,6 +22,7 @@ int main()
 
 	tQueue<SPELLS> Spells;
 	tStack<SPELLS> Second;
+	ENEMY * Enemy = new ENEMY(texture, { 100,100,(float)texture.width,(float)texture.height });
 
 	PLAYER * Player = new PLAYER(texture, {0,0,(float)texture.width, (float)texture.height});
 
@@ -98,10 +100,17 @@ int main()
 
 		if (IsMouseButtonPressed(0))
 		{
-			(*Player).AddToQueue({ (float)GetMouseX(), (float)GetMouseY() });
+			if(!(*Enemy).IsClicked())
+				(*Player).AddToQueue({ (float)GetMouseX(), (float)GetMouseY() });
+			else
+			{
+				(*Player).SelectEnemy((*Enemy).GetPosition());
+			}
+			
 		}
 
 		(*Player).Update();
+		(*Enemy).Update();
 
 		EndDrawing();
 	}

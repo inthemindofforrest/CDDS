@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConstAndTypeDef", "ConstAnd
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "Vectors\Vectors.vcxproj", "{05EA7FB0-7928-4D9F-B4E0-926A7C65E7B6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{A23A637B-5494-45FC-BA65-0DD6900BD9FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{05EA7FB0-7928-4D9F-B4E0-926A7C65E7B6}.Release|x64.Build.0 = Release|x64
 		{05EA7FB0-7928-4D9F-B4E0-926A7C65E7B6}.Release|x86.ActiveCfg = Release|Win32
 		{05EA7FB0-7928-4D9F-B4E0-926A7C65E7B6}.Release|x86.Build.0 = Release|Win32
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Debug|x64.ActiveCfg = Debug|x64
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Debug|x64.Build.0 = Debug|x64
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Debug|x86.ActiveCfg = Debug|Win32
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Debug|x86.Build.0 = Debug|Win32
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Release|x64.ActiveCfg = Release|x64
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Release|x64.Build.0 = Release|x64
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Release|x86.ActiveCfg = Release|Win32
+		{A23A637B-5494-45FC-BA65-0DD6900BD9FE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

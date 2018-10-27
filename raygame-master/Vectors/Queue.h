@@ -25,7 +25,7 @@ public:
 	void pop()                           // drops the top-most element of the Queue
 	{
 		if (vec.size() > 0)
-			vec.pop_front();
+			vec.pop_back();
 	}
 
 	const T& front() const                           // returns the front-most element
