@@ -18,5 +18,7 @@ public:
 	HighScoreTable(std::string fileName);
 	~HighScoreTable();
 
-	void BubbleSort();
+	void BubbleSort(bool Decending);
+	void InsertionSort();
+	void LocalMergeSort();
 };

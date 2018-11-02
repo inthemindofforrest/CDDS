@@ -24,12 +24,18 @@
     <ClCompile Include="HighScoreTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MergeSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HighScoreEntry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HighScoreTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -118,10 +118,12 @@
     <ClCompile Include="HighScoreEntry.cpp" />
     <ClCompile Include="HighScoreTable.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MergeSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="HighScoreEntry.h" />
     <ClInclude Include="HighScoreTable.h" />
+    <ClInclude Include="MergeSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
