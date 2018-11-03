@@ -150,11 +150,11 @@ void HighScoreTable::LocalMergeSort()
 }
 
 
-bool HighScoreTable::SaveBackToFile(std::string fileName)
-{
-	std::string CurrentElement;
-	std::string Line;
-	std::fstream file(fileName, std::ios::out);
-	int InputNumber = 0;
-
-}
+//bool HighScoreTable::SaveBackToFile(std::string fileName)
+//{
+//	std::string CurrentElement;
+//	std::string Line;
+//	std::fstream file(fileName, std::ios::out);
+//	int InputNumber = 0;
+//
+//}
