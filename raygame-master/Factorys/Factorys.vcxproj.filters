@@ -18,45 +18,43 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gamestate.cpp">
+    <ClCompile Include="RedBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="BlueBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DeathObject.cpp">
+    <ClCompile Include="Factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FallingFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Gamestate.h">
+    <ClInclude Include="IBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="RedBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DeathObject.h">
+    <ClInclude Include="BlueBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SelectPlayer.h">
+    <ClInclude Include="IFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SimpleSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="PlayerTexture.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Player2Texture.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Player1Texture.png">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

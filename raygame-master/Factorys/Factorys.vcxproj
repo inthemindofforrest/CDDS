@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FB5A8CD6-EBFF-4C1D-AAC8-9C5CDEED4BA3}</ProjectGuid>
-    <RootNamespace>SingletonsEnums</RootNamespace>
+    <ProjectGuid>{E75D5E94-795B-4527-A351-5250F713527E}</ProjectGuid>
+    <RootNamespace>Factorys</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -120,23 +120,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DeathObject.cpp" />
-    <ClCompile Include="Gamestate.cpp" />
+    <ClCompile Include="BlueBox.cpp" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="FallingFactory.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RedBox.cpp" />
     <ClCompile Include="SimpleSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DeathObject.h" />
-    <ClInclude Include="Gamestate.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="SelectPlayer.h" />
+    <ClInclude Include="BlueBox.h" />
+    <ClInclude Include="Factory.h" />
+    <ClInclude Include="FallingFactory.h" />
+    <ClInclude Include="IBox.h" />
+    <ClInclude Include="IFactory.h" />
+    <ClInclude Include="RedBox.h" />
     <ClInclude Include="SimpleSprite.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Player1Texture.png" />
-    <Image Include="Player2Texture.png" />
-    <Image Include="PlayerTexture.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
