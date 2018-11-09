@@ -16,4 +16,10 @@ public:
 	SimpleSprite();
 	SimpleSprite(const std::string & filename, const std::string _sprType = "", float scale = 1);
 	~SimpleSprite();
+
+	void operator=(SimpleSprite const&copy);
+
+	void Resize(float newSize);
+
+	SimpleSprite * Clone();
 };
