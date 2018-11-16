@@ -4,6 +4,7 @@
 #include <time.h>
 
 #include "raylib.h"
+#include "GameState.h"
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
 	//--------------------------------------------------------------------------------------
 	int screenWidth = 800;
 	int screenHeight = 450;
-	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+	InitWindow(screenWidth, screenHeight, "\"Game\"");
 	SetTargetFPS(60);
 
 
@@ -22,7 +23,11 @@ int main()
 	{
 		BeginDrawing();
 		ClearBackground(BLACK);
-
+		switch (GameState::GetInstance().GetState())
+		{
+		default:
+			break;
+		}
 
 
 		EndDrawing();

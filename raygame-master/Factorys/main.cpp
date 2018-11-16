@@ -9,6 +9,7 @@
 #include "Factory.h"
 #include "FallingFactory.h"
 #include "SimpleSprite.h"
+#include "ObjectPooling.h"
 
 SimpleSprite* FallingFactory::spriteMasters;
 size_t FallingFactory::spriteCount;
@@ -24,7 +25,9 @@ int main()
 	SetTargetFPS(60);
 
 	FallingFactory::init();
-	std::vector<SimpleSprite> Objects;
+	//std::vector<SimpleSprite> Objects;
+	tObjectPool<SimpleSprite> Object(100);
+
 	// Main game loop
 	while (!WindowShouldClose())    // Detect window close button or ESC key
 	{
@@ -49,15 +52,22 @@ int main()
 			//Object = Temp;
 			//std::cout << Object[SizeOfRocks - 1].pos.x << ", " << Object[SizeOfRocks - 1].pos.y << std::endl;
 		}
-			Objects.push_back(*FallingFactory::getRandom()->Clone());
+			//Objects.push_back(*FallingFactory::getRandom()->Clone());
+			Object.recycle(FallingFactory::getRandom()->Clone());
 		}
 
 		//RockUpdate
 		{
-			for (int i = 0; i < Objects.size(); i++)
+			for (int i = 0; i < Object.capacity(); i++)
 			{
-				Objects.at(i).draw();
-				Objects.at(i).translate({ -1,0 });
+				if (Object.retrieve(i) != nullptr)
+				{
+					Object.retrieve(i)->draw();
+					Object.retrieve(i)->translate({ -1,0 });
+
+					if (Object.retrieve(i)->pos.x < 0)
+						Object.DeactivateIndex(i);
+				}
 			}
 		}
 

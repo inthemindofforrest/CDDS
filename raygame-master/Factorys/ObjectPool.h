@@ -5,7 +5,7 @@ template<typename T>
 class tObjectPool
 {
 	ObjectPool();                       // default initializes the object pool
-	ObjectPool(size_t initialCapacity); // initializes the pool to have a set number of objects
+	ObjectPool(int initialCapacity); // initializes the pool to have a set number of objects
 	~ObjectPool();                      // destroys all objects
 
 	T* free;                            // pointers to objects that can be reused
@@ -25,7 +25,7 @@ tObjectPool<T>::ObjectPool()
 }
 
 template<typename T>
-tObjectPool<T>::ObjectPool(size_t initialCapacity)
+tObjectPool<T>::ObjectPool(int initialCapacity)
 {
 	capacity = initialCapacity;
 	freeCount = initialCapacity;

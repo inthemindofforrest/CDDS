@@ -124,7 +124,6 @@
     <ClCompile Include="Factory.cpp" />
     <ClCompile Include="FallingFactory.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="RedBox.cpp" />
     <ClCompile Include="SimpleSprite.cpp" />
   </ItemGroup>
@@ -134,6 +133,7 @@
     <ClInclude Include="FallingFactory.h" />
     <ClInclude Include="IBox.h" />
     <ClInclude Include="IFactory.h" />
+    <ClInclude Include="ObjectPooling.h" />
     <ClInclude Include="RedBox.h" />
     <ClInclude Include="SimpleSprite.h" />
   </ItemGroup>

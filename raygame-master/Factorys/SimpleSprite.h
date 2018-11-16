@@ -18,8 +18,10 @@ public:
 	~SimpleSprite();
 
 	void operator=(SimpleSprite const&copy);
+	bool operator==(SimpleSprite &Other);
 
 	void Resize(float newSize);
 
 	SimpleSprite * Clone();
+	SimpleSprite * CloneRandom();
 };
